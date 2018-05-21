@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>180</y>
+      <w>570</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>ListaVisite
+--
+-head: Nodo
+-elementi: Int
+--
++ListaVisite()
+ListaVisite(in i: ListaVisite)
++getElementi(): Int	
+-creaNodo(in visita1: Visite, in link: Nodo): Nodo
++getLinkPosizione(in posizione: Int): Nodo
++getHead(): head
++inserisciInTesta(in v1: Visite)
++inserisciInCoda(in v1: Visite)
++inserisciInPosizione(in posizione:Int, in v1: Visite)
++eliminaInTesta(in posizione: int)
++eliminaInCoda(in posizione: int)
++eliminaInPosizione(in posizione: Int)
++eliminaVisita(in Id: int)
++getVisita(in posizione: Int): p.getInfo()
++eseguiVisita(in Id: int)
++esportaCSV(in nomeFile: String, in posizione: int)
++importaCSV(in nomeFile: String): listaVisite
++salvaListaVisite(in nomeFile: String)
++caricaListaVisite(in nomeFile: String): listaVisite</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>710</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Nodo
+--
+-info: Visite
+-link: Nodo
+--
++Nodo(in visite: Visite)
++getLink(): Nodo
++setLink( in link: Nodo)
++getInfo(): Visite
++setInfo(in info: Visite)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>30</y>
+      <w>370</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>Visite
+--
+-Id: Int
+-nomeP: String
+-CognomeP: String
+-nomeM: String
+-CognomeM: String
+-visitaSvolta: boolean
+-dataOra: LocalDateTime
+--
++Visite(in Id: Int, 
+in nomeP: String,
+in CognomeP: String,
+in nomeM:: String,
+in CognomeM: String,
+in visitaSvolta: boolean,
+in dataOra: LocalDateTime,
++Visite(in i: Visite)
++Visite()
++getId(): Int
++setId(Id: Int)
++getNomeP(): String
++setNomeP(in nomeP: String)
++getCognomeP(): String
++setCognomeP(in CognomeP: String)
++getNomeM(): String
++setNomeM(in nomeM: String)
++getCognomeM(): String
++setCognomeM(in CognomeM: String)
++getVisitaSvolta(): boolean
++setVisitaSvolta(in visitaSvolta: boolean)
++getDataOra(): LocalDateTime
++setDataOra(in dataOra: LocalDateTime)
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>550</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>550</y>
+      <w>90</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>810</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>740</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>740</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0;30.0;80.0</additional_attributes>
+  </element>
+</diagram>
